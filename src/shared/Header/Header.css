@@ -1,0 +1,23 @@
+.site-title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    color: #1A1919;
+}
+
+.menu .menu-item{
+    font-weight: 500;
+    color: #757575;
+}
+
+.login-btn {
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #383838 0%, #867474 100%);
+    padding: 10px 20px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
