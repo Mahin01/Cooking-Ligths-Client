@@ -1,32 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./SignUp.css";
 import { Button, Card, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProviders';
 
 const SignUp = () => {
+ 
     return (
         <Container>
         <Card className='my-5 w-50 m-auto'>
             <h2 className='card-header text-uppercase'>User Registration</h2>
-        <Form className='login-form p-3'>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-  
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Your Photo URL</Form.Label>
-          <Form.Control type="text" placeholder="Photo URL" />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Sign Up
-        </Button>
-        <p className='my-3'>Already Have an account? Login <Link to="/login">Here</Link></p>   
-      </Form>
+            <form onSubmit={HandleSignUp} className='p-3'>
+              <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">User Name</label>
+                <input type="text" className="form-control" name="name" aria-describedby="emailHelp" />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+                <input type="email" name='email' className="form-control" aria-describedby="emailHelp" />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                <input type="password" className="form-control" name='pwd' />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">Photo URL</label>
+                <input type="text" className="form-control" name='avatar' aria-describedby="emailHelp" />
+              </div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
       </Card>
       </Container>
     );
