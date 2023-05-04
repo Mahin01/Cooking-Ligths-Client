@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import ChefsInfo from '../ChefsInfo/ChefsInfo';
 import { Container, Row } from 'react-bootstrap';
+import FeaturedRecipe from '../Featured-recipe/FeaturedRecipe';
 
 const Home = () => {
     const [chefsData, setChefsData] = useState([]);
@@ -25,6 +26,7 @@ const Home = () => {
             )}
              </Row>
             </Container>
+            <FeaturedRecipe></FeaturedRecipe>
         </div>
     );
 };

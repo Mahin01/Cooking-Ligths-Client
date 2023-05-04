@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import React from 'react';
+import { Button, Card, Col } from 'react-bootstrap';
 
 const ChefsInfo = ({singleChefData}) => {
     const {id, chefPictureUrl, chefName, numRecipes, numLikes, yearsOfExperience} = singleChefData;
