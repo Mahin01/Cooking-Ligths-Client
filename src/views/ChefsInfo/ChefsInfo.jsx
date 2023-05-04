@@ -1,33 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 
 const ChefsInfo = () => {
+    const [chefsData, setChefsData] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/chefs-data')
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setChefsData(data))
         .catch(error => console.error(error))
     }, [])
     return (
         <div>
-            <Container className='my-5'>
-                <h2 className='text-center mb-5'>Meet Our Chefs</h2>
-                <Row>
-                    <Col md={4}>
-                        <Card style={{ width: '18rem' }}>
-                         <Card.Img variant="top" src="holder.js/100px180" />
+                {   chefsData.map(singleChefData => <div className='container'
+                    key = {singleChefData.id}
+                >
+                    <Col xs={12} md={4}>
+                        <Card>
+                         <Card.Img variant="top" src={singleChefData.chefPictureUrl} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>{singleChefData.chefName}</Card.Title>
                                 <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                Total Recipes: {singleChefData.numRecipes}
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Card.Text>
+                                Experience: {singleChefData.yearsOfExperience}
+                                </Card.Text>
+                                <Card.Text>
+                                Total Likes: {singleChefData.numLikes}
+                                </Card.Text>
+                                <Button variant="primary">View Recipes</Button>
                             </Card.Body>
                         </Card>
                     </Col>
-                </Row>
-            </Container>
+                    </div>
+                    
+                )}
         </div>
     );
 };
