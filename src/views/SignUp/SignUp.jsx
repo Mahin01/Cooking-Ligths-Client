@@ -5,7 +5,23 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProviders';
 
 const SignUp = () => {
- 
+  const {user, createUser} = useContext(AuthContext);
+
+  const HandleSignUp = event => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.pwd.value;
+    const avatar = form.avatar.value;
+
+    createUser(email, password)
+    .then(result => {
+      const loggedUser = result.user;
+      form.reset();
+    })
+    .catch(error => console.error(error))
+  }
     return (
         <Container>
         <Card className='my-5 w-50 m-auto'>

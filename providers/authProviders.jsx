@@ -10,6 +10,10 @@ const githubProvider = new GithubAuthProvider();
 const AuthProviders = ({children}) => {
     const [user, setUser] = useState(null);
 
+    const createUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+
     const signUser = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
@@ -23,6 +27,7 @@ const AuthProviders = ({children}) => {
     }
     const authInfo = {
         user,
+        createUser,
         signUser,
         signInWithGoogle,
         signInWithGithub
