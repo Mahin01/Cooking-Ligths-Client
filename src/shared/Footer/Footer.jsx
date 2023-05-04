@@ -2,12 +2,12 @@ import React from 'react';
 
 const Footer = () => {
     return (
-    <footer className="page-footer font-small blue pt-4">
+    <footer className="page-footer font-small pt-4">
             <div className="container-fluid text-md-left text-sm-center">
                 <div className="row">
-                    <div className="col-md-3 mt-md-0 mt-3 text-md-left">
+                    <div className="col-md-3 mt-md-0 mt-3">
                     <h5 className="font-weight-bold">Cooking Lights</h5>
-                        <p>Enjoy the best cuisine experience from our senior & experienced chefs made delicious items.</p>
+                        <p style={{ width: '300px' }}>Enjoy the best cuisine experience from our senior & experienced chefs made delicious items.</p>
                     </div>
 
                     <hr className="clearfix w-100 d-md-none pb-0"/>
