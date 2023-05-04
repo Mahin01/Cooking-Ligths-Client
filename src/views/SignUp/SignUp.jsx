@@ -1,6 +1,7 @@
 import React from 'react';
 import "./SignUp.css";
 import { Button, Card, Container, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     return (
