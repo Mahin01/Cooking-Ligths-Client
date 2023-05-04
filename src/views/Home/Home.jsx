@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import ChefsInfo from '../ChefsInfo/ChefsInfo';
 import { Container, Row } from 'react-bootstrap';
 import FeaturedRecipe from '../Featured-recipe/FeaturedRecipe';
+import Ingredients from '../Ingredients/Ingredients';
 
 const Home = () => {
     const [chefsData, setChefsData] = useState([]);
@@ -15,6 +16,8 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <FeaturedRecipe></FeaturedRecipe>
+            <Ingredients></Ingredients>
             <Container className='my-5'>
                 <h2 className='text-center mb-5'>Meet Our Chefs</h2>
              <Row>
@@ -26,7 +29,6 @@ const Home = () => {
             )}
              </Row>
             </Container>
-            <FeaturedRecipe></FeaturedRecipe>
         </div>
     );
 };
