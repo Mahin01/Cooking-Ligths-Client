@@ -1,11 +1,21 @@
 import React, { useContext } from 'react';
 import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import "./Header.css";
 import { AuthContext } from '../../../providers/AuthProviders';
 
 const Header = () => {
-  const {user} = useContext(AuthContext);
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+    .then(() => {
+      // Sign-out successful.
+    }).catch((error) => {
+      console.error(error);
+      // An error happened.
+    });
+  }
     return (
         <Navbar collapseOnSelect expand="lg">
             <Container>
@@ -27,7 +37,7 @@ const Header = () => {
                 {user ? 
                 <div>
                 <span><Image src={user.photoURL}></Image></span>
-                  <Button className="login-btn" variant="primary"><Nav.Link><Link className='text-decoration-none menu-item' to="/login">Logout</Link></Nav.Link></Button> 
+                  <Button onClick={handleLogout} className="login-btn" variant="primary">Logout</Button> 
                 </div>
                 :
                 <Button className="login-btn" variant="primary"><Nav.Link><Link className='text-decoration-none menu-item' to="/login">Login</Link></Nav.Link></Button>
