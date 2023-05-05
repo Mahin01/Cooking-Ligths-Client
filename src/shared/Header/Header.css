@@ -22,3 +22,7 @@
     color: #FFFFFF !important;
     border-radius: 5px;
 }
+
+.active-link{
+    border-bottom: 2px solid #383838 !important;
+}

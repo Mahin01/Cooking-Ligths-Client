@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import "./Header.css";
 import { AuthContext } from '../../../providers/AuthProviders';
 
@@ -24,13 +24,13 @@ const Header = () => {
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="m-auto menu">
                   <Nav.Link>
-                    <Link className='text-decoration-none menu-item' to="/">Home</Link>
+                    <NavLink className={({ isActive }) => (isActive ? 'active-link text-decoration-none menu-item' : 'link text-decoration-none menu-item')} to="/">Home</NavLink>
                   </Nav.Link>
                   <Nav.Link>
-                    <Link className='text-decoration-none menu-item' to="/stat">Blog</Link>
+                    <NavLink  className={({ isActive }) => (isActive ? 'active-link text-decoration-none menu-item' : 'link text-decoration-none menu-item')} to="/blog">Blog</NavLink>
                   </Nav.Link>
                   <Nav.Link>
-                    <Link className='text-decoration-none menu-item' to="/applied-jobs">Contact</Link>
+                    <NavLink  className={({ isActive }) => (isActive ? 'active-link text-decoration-none menu-item' : 'link text-decoration-none menu-item')} to="/contact">Contact</NavLink>
                   </Nav.Link>
                 </Nav>
                 <Nav>
