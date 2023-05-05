@@ -11,6 +11,7 @@ import Home from './views/Home/Home';
 import Login from './views/Login/Login';
 import SignUp from './views/SignUp/SignUp';
 import AuthProviders, { AuthContext } from '../providers/AuthProviders';
+import ChefRecipe from './views/ChefRecipe/ChefRecipe';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <SignUp></SignUp>
+      },
+      {
+        path: "/chef-recipe/:id",
+        element: <ChefRecipe></ChefRecipe>, 
+        loader: ({params}) => fetch(`http://localhost:5000/chefsData/${params.id}`)
       }
     ]
   },

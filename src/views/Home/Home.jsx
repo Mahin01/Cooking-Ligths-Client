@@ -8,11 +8,11 @@ import Ingredients from '../Ingredients/Ingredients';
 const Home = () => {
     const [chefsData, setChefsData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/chefs-data')
+        fetch('http://localhost:5000/chefsData')
         .then(res => res.json())
         .then(data => setChefsData(data))
         .catch(error => console.error(error))
-    }, [])
+    }, []);
     return (
         <div>
             <Banner></Banner>
@@ -21,7 +21,7 @@ const Home = () => {
             <Container className='my-5'>
                 <h2 className='text-center mb-5'>Meet Our Chefs</h2>
              <Row>
-             {   chefsData.map(singleChefData => <ChefsInfo    className='container'
+             {  chefsData.map(singleChefData => <ChefsInfo
              key = {singleChefData.id}
              singleChefData = {singleChefData}
             >

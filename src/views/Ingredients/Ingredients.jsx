@@ -15,7 +15,7 @@ const Ingredients = () => {
                     Fine ingredients
                     </h3>
                     <figure>
-                    <img src="./../../../public/divider2.png" alt="Divider" className="img-fluid" />
+                    <img src="divider2.png" alt="Divider" className="img-fluid" />
                     </figure>
                     <p>
                     If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect
@@ -24,11 +24,11 @@ const Ingredients = () => {
                     </p>
 
                     <figure>
-                    <img src="./../../../public/image1.png" alt="Ingredients" className="img-fluid" />
+                    <img src="image1.png" alt="Ingredients" className="img-fluid" />
 
-                    <img src="./../../../public/image2.png" alt="Ingredients" className="img-fluid" />
+                    <img src="image2.png" alt="Ingredients" className="img-fluid" />
 
-                    <img src="./../../../public/image3.png" alt="Ingredients" className="img-fluid" />
+                    <img src="image3.png" alt="Ingredients" className="img-fluid" />
                     </figure>
 
                 </div>

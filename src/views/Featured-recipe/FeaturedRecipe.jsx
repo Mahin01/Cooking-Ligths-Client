@@ -8,7 +8,7 @@ const FeaturedRecipe = () => {
             <Row>
                 <Col xs={12} md={4}>
                 <Card>
-                    <Card.Img style={{ height:'300px' }} variant="top" src="./../../../public/Lahmacun.jpg" />
+                    <Card.Img style={{ height:'300px' }} variant="top" src="Lahmacun.jpg" />
                     <Card.Body>
                         <Card.Title>Lamhacun</Card.Title>
                         <Card.Text>
@@ -20,7 +20,7 @@ const FeaturedRecipe = () => {
                 </Col>
                 <Col xs={12} md={4}>
                 <Card>
-                    <Card.Img style={{ height:'300px' }} variant="top" src="./../../../public/tavuk-sis.jpg" />
+                    <Card.Img style={{ height:'300px' }} variant="top" src="tavuk-sis.jpg" />
                     <Card.Body>
                         <Card.Title>Tavuk Sis</Card.Title>
                         <Card.Text>
@@ -32,7 +32,7 @@ const FeaturedRecipe = () => {
                 </Col>
                 <Col xs={12} md={4}>
                 <Card>
-                    <Card.Img style={{ height:'300px' }} variant="top" src="./../../../public/baklava.jpg" />
+                    <Card.Img style={{ height:'300px' }} variant="top" src="baklava.jpg" />
                     <Card.Body>
                         <Card.Title>Baklava</Card.Title>
                         <Card.Text>
