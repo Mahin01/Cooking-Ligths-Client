@@ -1,14 +1,14 @@
 .site-title {
     font-weight: 700;
-    font-size: 35px;
+    font-size: 28px;
     line-height: 44px;
-    color: #3d3d3d;
+    color: #383838;
 }
 
 .menu .menu-item{
     font-weight: 500;
     font-size: 20px;
-    color: #757575;
+    color: #867474;
 }
 
 .login-btn {

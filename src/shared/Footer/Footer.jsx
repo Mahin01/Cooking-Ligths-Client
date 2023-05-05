@@ -6,7 +6,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-          <footer className="text-white text-center text-lg-start" style={{ backgroundColor : '#23242a' }}>
+          <footer className="text-white text-center text-lg-start" style={{ background : 'linear-gradient(90deg, #383838 0%, #867474 100%)' }}>
             <div className="container p-4">
               <div className="row mt-4">
                 <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
