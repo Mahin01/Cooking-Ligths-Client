@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Figure, Row } from 'react-bootstrap';
 import { useLoaderData, useParams } from 'react-router-dom';
 import RecipeCard from '../RecipeCard/RecipeCard';
-
+import LazyLoad from 'react-lazy-load';
+ 
 const ChefRecipe = () => {
   const [loading, setLoading] = useState(true);
   const [individualChefRecipe, setIndividualChefRecipe] = useState([]);
@@ -43,8 +44,11 @@ const ChefRecipe = () => {
         </Col>
         <Col xs={12} md={6}>
           <Figure>
+          <LazyLoad height={762} offset={300}>
             <Figure.Image className="rounded" src={chefPictureUrl} />
+          </LazyLoad>
           </Figure>
+          
         </Col>
       </Row>
       <Row>
