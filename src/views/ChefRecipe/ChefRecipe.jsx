@@ -7,6 +7,13 @@ const ChefRecipe = () => {
   const individualChefData = useLoaderData();
   const { chefPictureUrl, chefName, numRecipes, numLikes, yearsOfExperience, shortDescription } = individualChefData;
 
+  useEffect(() => {
+    fetch(`http://localhost:5000/chefs-recipe/${id}`)
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error))
+  }, [id])
+
   return (
     <Container className="banner">
       <Row>
