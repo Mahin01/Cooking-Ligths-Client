@@ -12,7 +12,7 @@ const ChefRecipe = () => {
   const { chefPictureUrl, chefName, numRecipes, numLikes, yearsOfExperience, shortDescription } = individualChefData;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/chefs-recipe/${id}`)
+    fetch(`https://cooking-ligths-server-mahin.vercel.app/${id}`)
       .then(res => res.json())
       .then(data => {setIndividualChefRecipe(data);
         setLoading(false);
@@ -45,7 +45,7 @@ const ChefRecipe = () => {
         <Col xs={12} md={6}>
           <Figure>
           <LazyLoad height={762} offset={300}>
-            <Figure.Image className="rounded" src={chefPictureUrl} />
+            <Figure.Image style={{width:"450px", height:"350px" }} className=" rounded" src={chefPictureUrl} />
           </LazyLoad>
           </Figure>
           

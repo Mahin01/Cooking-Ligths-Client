@@ -9,7 +9,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [chefsData, setChefsData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/chefsData')
+        fetch('https://cooking-ligths-server-mahin.vercel.app/chefsData')
         .then(res => res.json())
         .then(data => {setChefsData(data);
         setLoading(false);
