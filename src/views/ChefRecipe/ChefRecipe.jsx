@@ -4,6 +4,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import RecipeCard from '../RecipeCard/RecipeCard';
 
 const ChefRecipe = () => {
+  const [loading, setLoading] = useState(true);
   const [individualChefRecipe, setIndividualChefRecipe] = useState([]);
   const { id } = useParams();
   const individualChefData = useLoaderData();
@@ -12,9 +13,19 @@ const ChefRecipe = () => {
   useEffect(() => {
     fetch(`http://localhost:5000/chefs-recipe/${id}`)
       .then(res => res.json())
-      .then(data => setIndividualChefRecipe(data))
+      .then(data => {setIndividualChefRecipe(data);
+        setLoading(false);
+      })
       .catch(error => console.error(error))
   }, [id]);
+
+  if(loading){
+    return <div className="d-flex align-items-center justify-content-center">
+    <div className="my-5 spinner-border text-success" role="status">
+      <span className="sr-only">Loading...</span>
+    </div>
+  </div>;
+}
 
   const recipeArray = individualChefRecipe.recipes;
 
