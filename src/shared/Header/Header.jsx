@@ -40,7 +40,9 @@ const Header = () => {
                   <Button onClick={handleLogout} className="login-btn" variant="primary">Logout</Button> 
                 </div>
                 :
-                <Button className="login-btn" variant="primary"><Nav.Link><Link className='text-decoration-none menu-item' to="/login">Login</Link></Nav.Link></Button>
+                <Nav.Link>
+                  <Link className='btn login-btn text-decoration-none menu-item' to="/login">Login</Link>
+                </Nav.Link>
                 }
                 </Nav>
               </Navbar.Collapse>
